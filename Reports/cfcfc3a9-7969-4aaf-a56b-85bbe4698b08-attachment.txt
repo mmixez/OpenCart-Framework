@@ -1,0 +1,12 @@
+Locator Name: my_account_drop_menu_xpath, Locator Value: //span[text()='My Account']
+Locator Name: my_account_drop_menu_xpath, Locator Value: //span[text()='My Account']
+Locator Name: login_option_link_text, Locator Value: Login
+Locator Name: login_option_link_text, Locator Value: Login
+Locator Name: email_address_field_id, Locator Value: input-email
+Locator Name: email_address_field_id, Locator Value: input-email
+Locator Name: password_field_id, Locator Value: input-password
+Locator Name: password_field_id, Locator Value: input-password
+Locator Name: login_button_xpath, Locator Value: //input[@value='Login']
+Locator Name: login_button_xpath, Locator Value: //input[@value='Login']
+Locator Name: edit_your_account_information_option_link_text, Locator Value: Edit your account information
+Locator Name: edit_your_account_information_option_link_text, Locator Value: Edit your account information

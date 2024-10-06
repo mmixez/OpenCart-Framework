@@ -44,8 +44,6 @@ class TestRegister:
         # self.driver.find_element(By.NAME, "agree").click()
         # self.driver.find_element(By.XPATH,"//input[@value='Continue']").click()
 
-
-
     def test_register_with_all_fields(self):
         home_page = HomePage(self.driver)
         home_page.click_on_my_account_drop_menu()
@@ -64,19 +62,6 @@ class TestRegister:
         account_success_page = AccountSuccessPage(self.driver)
         assert account_success_page.retrieve_account_creation_message().__eq__(expected_heading_text)
 
-        # self.driver.find_element(By.XPATH, "//span[text()='My Account']").click()
-        # self.driver.find_element(By.LINK_TEXT, "Register").click()
-        # self.driver.find_element(By.ID, "input-firstname").send_keys("Jian")
-        # self.driver.find_element(By.ID, "input-lastname").send_keys("Kim")
-        # self.driver.find_element(By.ID, "input-email").send_keys(self.generate_email_with_random_string())
-        # self.driver.find_element(By.ID, "input-telephone").send_keys("12345678")
-        # self.driver.find_element(By.ID, "input-password").send_keys("12345")
-        # self.driver.find_element(By.ID, "input-confirm").send_keys("12345")
-        # self.driver.find_element(By.XPATH,"//input[@name='newsletter'][@value='1']").click()
-        # self.driver.find_element(By.NAME, "agree").click()
-        # self.driver.find_element(By.XPATH, "//input[@value='Continue']").click()
-
-
     def test_register_with_duplicate_email(self):
         home_page = HomePage(self.driver)
         home_page.click_on_my_account_drop_menu()
@@ -92,21 +77,8 @@ class TestRegister:
         register_page.select_agree_checkbox_field()
         register_page.click_on_continue_button()
 
-        # self.driver.find_element(By.XPATH, "//span[text()='My Account']").click()
-        # self.driver.find_element(By.LINK_TEXT, "Register").click()
-        # self.driver.find_element(By.ID, "input-firstname").send_keys("Jian")
-        # self.driver.find_element(By.ID, "input-lastname").send_keys("Kim")
-        # self.driver.find_element(By.ID, "input-email").send_keys("mmmixez3@gmail.com")
-        # self.driver.find_element(By.ID, "input-telephone").send_keys("12345678")
-        # self.driver.find_element(By.ID, "input-password").send_keys("12345")
-        # self.driver.find_element(By.ID, "input-confirm").send_keys("12345")
-        # self.driver.find_element(By.XPATH, "//input[@name='newsletter'][@value='1']").click()
-        # self.driver.find_element(By.NAME, "agree").click()
-        # self.driver.find_element(By.XPATH, "//input[@value='Continue']").click()
         expected_warning_text = "Warning: E-Mail Address is already registered!"
         assert register_page.retrieve_dupliacte_email_warning().__contains__(expected_warning_text)
-
-
 
     def test_without_entering_any_field(self):
         home_page = HomePage(self.driver)

@@ -1,0 +1,24 @@
+Locator Name: my_account_drop_menu_xpath, Locator Value: //span[text()='My Account']
+Locator Name: my_account_drop_menu_xpath, Locator Value: //span[text()='My Account']
+Locator Name: register_option_link_text, Locator Value: Register
+Locator Name: register_option_link_text, Locator Value: Register
+Locator Name: first_name_field_id, Locator Value: input-firstname
+Locator Name: first_name_field_id, Locator Value: input-firstname
+Locator Name: last_name_field_id, Locator Value: input-lastname
+Locator Name: last_name_field_id, Locator Value: input-lastname
+Locator Name: email_field_id, Locator Value: input-email
+Locator Name: email_field_id, Locator Value: input-email
+Locator Name: telephone_field_id, Locator Value: input-telephone
+Locator Name: telephone_field_id, Locator Value: input-telephone
+Locator Name: password_field_id, Locator Value: input-password
+Locator Name: password_field_id, Locator Value: input-password
+Locator Name: confirm_password_field_id, Locator Value: input-confirm
+Locator Name: confirm_password_field_id, Locator Value: input-confirm
+Locator Name: yes_radio_button_xpath, Locator Value: //input[@name='newsletter'][@value='1']
+Locator Name: yes_radio_button_xpath, Locator Value: //input[@name='newsletter'][@value='1']
+Locator Name: agree_field_name, Locator Value: agree
+Locator Name: agree_field_name, Locator Value: agree
+Locator Name: continue_button_xpath, Locator Value: //input[@value='Continue']
+Locator Name: continue_button_xpath, Locator Value: //input[@value='Continue']
+Locator Name: duplicate_email_warning_xpath, Locator Value: //div[@id='account-register']/div[1]
+Locator Name: duplicate_email_warning_xpath, Locator Value: //div[@id='account-register']/div[1]

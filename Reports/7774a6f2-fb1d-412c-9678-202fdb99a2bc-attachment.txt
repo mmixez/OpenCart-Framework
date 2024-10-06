@@ -1,0 +1,6 @@
+Locator Name: search_box_field_name, Locator Value: search
+Locator Name: search_box_field_name, Locator Value: search
+Locator Name: search_button_xpath, Locator Value: //button[@class='btn btn-default btn-lg']
+Locator Name: search_button_xpath, Locator Value: //button[@class='btn btn-default btn-lg']
+Locator Name: valid_hp_product_link_text, Locator Value: HP LP3065
+Locator Name: valid_hp_product_link_text, Locator Value: HP LP3065

@@ -3,29 +3,28 @@ from selenium.webdriver.common.by import By
 
 class BasePage:
 
-    def __init__(self,driver):
+    def __init__(self, driver):
         self.driver = driver
 
-    def type_into_element(self,text,locator_name,locator_value):
-        element = self.get_element(locator_name,locator_value)
+    def type_into_element(self, text, locator_name, locator_value):
+        element = self.get_element(locator_name, locator_value)
         element.click()
         element.clear()
         element.send_keys(text)
 
-    def element_click(self,locator_name,locator_value):
-        element = self.get_element(locator_name,locator_value)
+    def element_click(self, locator_name, locator_value):
+        element = self.get_element(locator_name, locator_value)
         element.click()
 
-
-    def check_display_status_of_element(self,locator_name,locator_value):
-        element = self.get_element(locator_name,locator_value)
+    def check_display_status_of_element(self, locator_name, locator_value):
+        element = self.get_element(locator_name, locator_value)
         return element.is_displayed()
 
-    def retrieve_element_text(self,locator_name,locator_value):
-        element = self.get_element(locator_name,locator_value)
+    def retrieve_element_text(self, locator_name, locator_value):
+        element = self.get_element(locator_name, locator_value)
         return element.text
 
-    def get_element(self,locator_name,locator_value):
+    def get_element(self, locator_name, locator_value):
 
         element = None
         print(f"Locator Name: {locator_name}, Locator Value: {locator_value}")  # Debugging log

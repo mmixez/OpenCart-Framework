@@ -6,8 +6,8 @@ from utilities import ReadConfigurations
 
 @pytest.fixture()
 def setup_and_teardown(request):
-    browser = ReadConfigurations.read_configuration("basic info","browser")
-    #driver = webdriver.Chrome()
+    browser = ReadConfigurations.read_configuration("basic info", "browser")
+
     driver = None
     if browser.__eq__("chrome"):
         driver = webdriver.Chrome()
@@ -20,8 +20,8 @@ def setup_and_teardown(request):
     else:
         print("Provide a valid browser name from this list chrome/firefox/edge")
 
-    #driver.maximize_window()
-    app_url = ReadConfigurations.read_configuration("basic info","url")
+    # driver.maximize_window()
+    app_url = ReadConfigurations.read_configuration("basic info", "url")
     driver.get(app_url)
     request.cls.driver = driver
     yield
