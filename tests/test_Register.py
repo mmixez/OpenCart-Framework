@@ -27,6 +27,7 @@ class TestRegister:
         register_page.enter_password_confirm("12345")
         register_page.select_agree_checkbox_field()
         register_page.click_on_continue_button()
+
         expected_heading_text = "Your Account Has Been Created!"
         account_success_page = AccountSuccessPage(self.driver)
         assert account_success_page.retrieve_account_creation_message().__eq__(expected_heading_text)
@@ -113,12 +114,14 @@ class TestRegister:
         home_page.select_register_option()
         register_page = RegisterPage(self.driver)
         register_page.enter_first_name("")
+
         register_page.enter_last_name("")
         register_page.enter_email("")
         register_page.enter_telephone("")
         register_page.enter_password("")
         register_page.enter_password_confirm("")
         register_page.click_on_continue_button()
+        time.sleep(3)
         # self.driver.find_element(By.XPATH, "//span[text()='My Account']").click()
         # self.driver.find_element(By.LINK_TEXT, "Register").click()
         # self.driver.find_element(By.ID, "input-firstname").send_keys("")
@@ -128,11 +131,12 @@ class TestRegister:
         # self.driver.find_element(By.ID, "input-password").send_keys("")
         # self.driver.find_element(By.ID, "input-confirm").send_keys("")
         # self.driver.find_element(By.XPATH, "//input[@value='Continue']").click()
-        expected_privacy_policy_warning_message = "Warning: You must agree to the Privacy Policy!"
-        assert register_page.retrieve_privacy_policy_warning().__contains__(expected_privacy_policy_warning_message)
+        expected_privacy_policy_warning_text = "Warning: You must agree to the Privacy Policy!"
+        assert register_page.retrieve_privacy_policy_warning().__eq__(expected_privacy_policy_warning_text)
 
         expected_first_name_warning_message = "First Name must be between 1 and 32 characters!"
-        assert register_page.retrieve_first_name_warning().__eq__(expected_first_name_warning_message)
+        assert register_page.retrieve_first_name_warning().__contains__(
+            expected_first_name_warning_message)
 
         expected_last_name_warning_message = "Last Name must be between 1 and 32 characters!"
         assert register_page.retrieve_last_name_warning().__eq__(
